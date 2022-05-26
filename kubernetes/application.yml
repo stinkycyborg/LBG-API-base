@@ -23,3 +23,4 @@ spec:
         image: gcr.io/lbg-090522/lbg-api-app:latest
         ports:
         - containerPort: 4000
+           
