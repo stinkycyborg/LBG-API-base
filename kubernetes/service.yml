@@ -1,0 +1,12 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: lbg-api-app
+spec:
+  type: LoadBalancer
+  selector:
+    app: lbg-api-app
+  ports:
+  - protocol: TCP
+    port: 80 
+    targetPort: 4000

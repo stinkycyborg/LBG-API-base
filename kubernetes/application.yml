@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: lbg-api-app
+  labels:
+    app: lbg-api-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: lbg-api-app
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+  template:
+    metadata:
+      labels:
+        app: lbg-api-app
+    spec:
+      containers:
+      - name: lbg-api-app
+        image: gcr.io/lbg-090522/lbg-api-app:latest
+        ports:
+        - containerPort: 4000
