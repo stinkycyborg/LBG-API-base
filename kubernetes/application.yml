@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
       - name: lbg-api-app
-        image: gcr.io/lbg-090522/lbg-api-app:latest
+        image: gcr.io/lbg-090522/lbg-api-app:peter-latest
         ports:
         - containerPort: 4000
            
